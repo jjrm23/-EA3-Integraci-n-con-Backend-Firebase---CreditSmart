@@ -1,0 +1,9 @@
+# Dependencias
+/node_modules
+
+# Archivos de configuración de Vite / entorno
+.env
+dist
+
+# VS Code
+.vscode
