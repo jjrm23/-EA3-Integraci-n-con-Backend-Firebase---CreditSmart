@@ -28,13 +28,13 @@ A continuación, se muestran capturas de las pantallas principales del proyecto:
 
 Muestra los productos disponibles, leídos directamente desde Firestore.
 
-![Captura de la página de inicio con el listado de productos](img/imagen_home.png)
+![Captura de la página de inicio con el listado de productos](img/homepage.png)
 
 ### 2. Formulario de Solicitud (CREATE)
 
 Página para ingresar los datos de la nueva solicitud de crédito.
 
-![Captura del formulario para crear una solicitud de crédito](img/imagen_formulario.png)
+![Captura del formulario para crear una solicitud de crédito](img/solicitudver.png)
 
 ### 3. Mis Solicitudes (QUERY)
 
