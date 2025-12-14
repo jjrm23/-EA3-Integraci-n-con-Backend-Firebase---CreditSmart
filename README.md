@@ -1,31 +1,82 @@
-# 🏦 EA3: Integración con Backend (Firebase) - CreditSmart
+#  EA3: Integración con Backend (Firebase) - CreditSmart
 
-Este proyecto es una aplicación web sencilla desarrollada con **React y Vite** que simula la gestión de productos crediticios, demostrando la integración completa de servicios **Backend como Servicio (BaaS)** usando **Google Firebase (Firestore)**.
+**Autor:** Jhon Jairo Rivera
 
-## 🚀 Funcionalidades Demostradas
+Este proyecto es una aplicación web desarrollada con **React y Vite** que simula la gestión de productos crediticios. Su objetivo principal es demostrar la integración completa de servicios **Backend como Servicio (BaaS)** usando **Google Firebase (Firestore)**.
 
-La aplicación implementa las siguientes operaciones de gestión de datos en tiempo real con Firebase:
+El proyecto implementa la lógica necesaria para manejar operaciones de lectura, creación y consulta de datos en tiempo real.
+
+---
+
+##  Funcionalidades Demostradas (CRUD)
+
+La aplicación cubre los siguientes criterios funcionales del backend:
 
 | Operación | Ruta | Descripción |
 | :--- | :--- | :--- |
-| **READ** (Lectura) | `/` (Home) | Carga y muestra una lista de productos crediticios desde la colección `productos_crediticios`. |
-| **CREATE** (Creación) | `/solicitar-credito` | Permite a los usuarios enviar una solicitud, guardando un nuevo documento en la colección `solicitudes_credito`. |
-| **QUERY** (Consulta/Filtro) | `/mis-solicitudes` | Filtra las solicitudes de crédito basándose en un email de prueba (`test@user.com`) y las ordena por fecha de creación. |
+| **READ** (Lectura) | `/` (Home) | Carga y muestra una lista de productos crediticios disponibles desde la colección `productos_crediticios` de Firestore. |
+| **CREATE** (Creación) | `/solicitar-credito` | Permite a los usuarios enviar una solicitud de crédito, validando los campos y guardando un nuevo documento en la colección `solicitudes_credito`. |
+| **QUERY** (Consulta/Filtro) | `/mis-solicitudes` | Filtra las solicitudes de crédito basándose en un email de prueba (`test@user.com`) y las ordena por fecha de creación (descendente). |
 
-## 🛠️ Tecnologías Utilizadas
+---
+
+##  Vistas de la Aplicación
+
+A continuación, se muestran capturas de las pantallas principales del proyecto:
+
+### 1. Vista de Productos (Home)
+
+Muestra los productos disponibles, leídos directamente desde Firestore.
+
+![Captura de la página de inicio con el listado de productos](img/imagen_home.png)
+
+### 2. Formulario de Solicitud (CREATE)
+
+Página para ingresar los datos de la nueva solicitud de crédito.
+
+![Captura del formulario para crear una solicitud de crédito](img/imagen_formulario.png)
+
+### 3. Mis Solicitudes (QUERY)
+
+Muestra la tabla de resultados de las solicitudes, filtradas para un usuario específico (ej: test@user.com).
+
+![Captura de la página de solicitudes filtradas](img/imagen_solicitudes.png)
+
+---
+
+##  Tecnologías y Requisitos
 
 * **Frontend:** React v18, Vite
 * **Routing:** React Router DOM v6
 * **Backend:** Google Firebase
     * **Base de Datos:** Cloud Firestore
-    * **Servicios:** Firebase SDK para conexión y gestión de colecciones.
 
-## ⚙️ Configuración e Instalación
+### Requisitos de Configuración
 
-Para ejecutar este proyecto localmente, sigue estos pasos:
+Para que la funcionalidad QUERY (`/mis-solicitudes`) funcione correctamente, debes haber creado el siguiente **Índice Compuesto** en la Consola de Firestore:
 
-### 1. Clona el Repositorio
+* **Colección:** `solicitudes_credito`
+* **Campo 1:** `email` (Ascendente)
+* **Campo 2:** `fechaSolicitud` (Descendente)
 
-```bash
-git clone [https://github.com/jjrm23/-EA3-Integraci-n-con-Backend-Firebase---CreditSmart.git](https://github.com/jjrm23/-EA3-Integraci-n-con-Backend-Firebase---CreditSmart.git)
-cd -EA3-Integraci-n-con-Backend-Firebase---CreditSmart
+### Instalación Local
+
+1.  **Clonar el Repositorio:**
+    ```bash
+    git clone [https://github.com/jjrm23/-EA3-Integraci-n-con-Backend-Firebase---CreditSmart.git](https://github.com/jjrm23/-EA3-Integraci-n-con-Backend-Firebase---CreditSmart.git)
+    cd -EA3-Integraci-n-con-Backend-Firebase---CreditSmart
+    ```
+
+2.  **Instalar Dependencias:**
+    ```bash
+    npm install
+    ```
+
+3.  **Configurar Variables de Entorno:**
+    Crea un archivo `.env` en la raíz del proyecto con tus credenciales de Firebase.
+
+4.  **Iniciar la Aplicación:**
+    ```bash
+    npm run dev
+    ```
+    La aplicación se ejecutará en `http://localhost:5173/`.
