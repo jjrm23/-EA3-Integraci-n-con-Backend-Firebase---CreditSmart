@@ -34,13 +34,13 @@ Muestra los productos disponibles, leídos directamente desde Firestore.
 
 Página para ingresar los datos de la nueva solicitud de crédito.
 
-![Captura del formulario para crear una solicitud de crédito](img/solicitudver.png)
+![Captura del formulario para crear una solicitud de crédito](img/solicitud.png)
 
 ### 3. Mis Solicitudes (QUERY)
 
 Muestra la tabla de resultados de las solicitudes, filtradas para un usuario específico (ej: test@user.com).
 
-![Captura de la página de solicitudes filtradas](img/imagen_solicitudes.png)
+![Captura de la página de solicitudes filtradas](img/imagen_solicitudver.png)
 
 ---
 
