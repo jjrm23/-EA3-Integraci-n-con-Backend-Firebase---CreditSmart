@@ -40,7 +40,7 @@ Página para ingresar los datos de la nueva solicitud de crédito.
 
 Muestra la tabla de resultados de las solicitudes, filtradas para un usuario específico (ej: test@user.com).
 
-![Captura de la página de solicitudes filtradas](img/imagen_solicitudver.png)
+![Captura de la página de solicitudes filtradas](img/solicitudver.png)
 
 ---
 
